@@ -1,0 +1,30 @@
+.profile__position {
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 16px;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+    .profile__position {
+        margin: 0 auto;
+        margin-top: 14px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 425px) {
+    .profile__position {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
