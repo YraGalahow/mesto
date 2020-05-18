@@ -10,9 +10,18 @@
 [0518/154658.291:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/154658.322:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/154658.322:ERROR:crash_report_database_win.cc(469)] failed to stat report
+<<<<<<< HEAD
 [0518/225428.805:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/225428.805:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/225428.805:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/230331.227:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/230331.227:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0518/230331.227:ERROR:crash_report_database_win.cc(469)] failed to stat report
+=======
+[0518/225620.124:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0518/225620.124:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0518/225620.124:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0518/225841.802:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0518/225841.802:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0518/225841.802:ERROR:crash_report_database_win.cc(469)] failed to stat report
+>>>>>>> b99979d65be47e77c300a428d4ef17f15a436f00
