@@ -8,6 +8,9 @@
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -15,15 +18,11 @@
         margin: 0 auto;
         margin-top: 14px;
         text-align: center;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
     }
 }
 
 @media (max-width: 425px) {
     .profile__position {
-        font-weight: normal;
         font-size: 14px;
         line-height: 17px;
     }

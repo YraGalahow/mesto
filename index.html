@@ -10,35 +10,23 @@
 
 <body>
     <div class="page">
-        <section class="popup popup_opened">
-            <form class="popup__container">
-                <button class="popup__close"><img  src="./images/CloseIcon.svg" alt="картинка кнопки"></button>
-                <h3 class="popup__title">Редактировать профиль</h3>
-                <input class="popup__First-Name" type="text">
-                <hr class="popup__line">
-                <input class="popup__position" type="text">
-                <hr class="popup__line">
-                <button class="popup__button">Сохранить</button>
-            </form>
-        </section>
         <header class="header">
             <img class="header__logo" src="./images/Vector.svg" alt="Логотип Mesto">
-            <hr class="header__line">
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__avatar" src="./images/image.jpg" alt="Логотип Яндекс Практикум">
+                <img class="profile__avatar" src="./images/image.jpg" alt="Фото пользователя">
                 <div class="profile__data">
                     <div class="profile__info">
-                        <h1 class="profile__First-Name">Жак-Ив Кусто </h1>
-                        <button class="profile__Edit-button"> 
+                        <h1 class="profile__first-name">Жак-Ив Кусто </h1>
+                        <button type="button" class="profile__edit-button">
                         <img src="./images/Vector(3).svg" alt="картинка кнопки">
-                     </button>
+                        </button>
                     </div>
                     <p class="profile__position">Исследователь океана</p>
                 </div>
 
-                <button class="profile__Add-button">
+                <button type="button" class="profile__add-button">
                     <img src="./images/Vector(4).svg" alt="картинка кнопки">
                 </button>
             </section>
@@ -47,42 +35,42 @@
                     <img class="element__item" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Карачаевск</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__item" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Гора Эльбрус</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__item" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Домбай</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__item" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Гора Эльбрус</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__item" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Домбай</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__item" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Фото природы">
                     <div class="element__caption">
                         <h3 class="element__title">Карачаево-Ч...</h3>
-                        <img class="element__like" src="./images/Vector(5).svg" alt="Фото природы">
+                        <button type="button" class="element__like"><img  src="./images/Vector(5).svg" alt="лайк"></button>
                     </div>
                 </div>
             </section>
@@ -90,6 +78,15 @@
         <footer class="footer">
             <p class="footer__copyright">&copy; 2020 Mesto Russia </p>
         </footer>
+        <section class="popup">
+            <form name="popup-form" method="get" autocomplete="off" action="URL" class="popup__container">
+                <button type="reset" class="popup__close"><img src="./images/CloseIcon.svg" alt="картинка кнопки"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <input type="text" name="first-name" class="popup__input popup_first-name">
+                <input type="text" name="position" class="popup__input popup_position">
+                <button type="submit" class="popup__button">Сохранить</button>
+            </form>
+        </section>
     </div>
     <script src="./script.js"></script>
 </body>

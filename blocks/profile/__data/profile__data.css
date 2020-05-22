@@ -3,10 +3,12 @@
     padding: 0;
     margin-left: 30px;
     margin-top: 18px;
+    max-width: calc(100% - 310px);
 }
 
 @media (max-width: 767px) {
     .profile__data {
+        max-width: 100%;
         margin: 0 auto;
         position: relative;
     }

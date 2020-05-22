@@ -1,4 +1,4 @@
-.profile__First-Name {
+.profile__first-name {
     margin: 0 auto;
     width: 100%;
     padding: 0px;
@@ -6,22 +6,25 @@
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
-    line-height: 30px;
+    line-height: 50px;
     vertical-align: top;
     color: #FFFFFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (max-width: 1023px) {
-    .profile__First-Name {
+    .profile__first-name {
         font-size: 27px;
     }
 }
 
 @media (max-width: 767px) {
-    .profile__First-Name {
+    .profile__first-name {
         font-weight: 500;
         font-size: 42px;
-        line-height: 30px;
+        line-height: 50px;
         margin: 0 auto;
         margin-top: 10.5px;
         text-align: center;
@@ -29,10 +32,8 @@
 }
 
 @media (max-width: 425px) {
-    .profile__First-Name {
-        text-align: center;
-        font-weight: 500;
+    .profile__first-name {
         font-size: 27px;
-        line-height: 20px;
+        line-height: 30px;
     }
 }
