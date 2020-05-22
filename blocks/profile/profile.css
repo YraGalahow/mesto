@@ -1,9 +1,9 @@
 @import url(./__avatar/profile__avatar.css);
 @import url(./__data/profile__data.css);
-@import url(./__First-name/profile__first-name.css);
+@import url(./__first-name/profile__first-name.css);
 @import url(./__position/profile__position.css);
-@import url(./__Edit-button/profile__edit-button.css);
-@import url(./__Add-button/profile__add-button.css);
+@import url(./__edit-button/profile__edit-button.css);
+@import url(./__add-button/profile__add-button.css);
 @import url(./__info/profile__info.css);
 .profile {
     margin: 0 auto;
