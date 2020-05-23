@@ -1,8 +1,6 @@
 @import url(./__container/popup__container.css);
 @import url(./__close/popup__close.css);
 @import url(./__title/popup__title.css);
-@import url(./_first-name/popup_first-name.css);
-@import url(./_position/popup_position.css);
 @import url(./__input/popup__input.css);
 @import url(./__button/popup__button.css);
 .popup {

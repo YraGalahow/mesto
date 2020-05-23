@@ -11,8 +11,6 @@
     max-width: calc(100% - 398px);
     margin-top: 40px;
     display: flex;
-    justify-content: flex-start;
-    position: relative;
 }
 
 @media (max-width: 1279px) {
