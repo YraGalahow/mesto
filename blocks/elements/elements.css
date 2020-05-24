@@ -24,7 +24,7 @@
 
 @media (max-width: 320px) {
     .elements {
-        max-width: calc(100% - 38px);
+        max-width: 100%;
         margin-top: 36px;
     }
 }
