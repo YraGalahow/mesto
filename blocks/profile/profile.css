@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(./__avatar/profile__avatar.css);
 @import url(./__data/profile__data.css);
 @import url(./__first-name/profile__first-name.css);
@@ -38,4 +39,46 @@
         margin-top: 42px;
         max-width: calc(100% - 38px);
     }
+=======
+@import url(./__avatar/profile__avatar.css);
+@import url(./__data/profile__data.css);
+@import url(./__first-name/profile__first-name.css);
+@import url(./__position/profile__position.css);
+@import url(./__edit-button/profile__edit-button.css);
+@import url(./__add-button/profile__add-button.css);
+@import url(./__info/profile__info.css);
+.profile {
+    margin: 0 auto;
+    padding: 0;
+    max-width: calc(100% - 398px);
+    margin-top: 40px;
+    display: flex;
+}
+
+@media (max-width: 1279px) {
+    .profile {
+        max-width: calc(100% - 300px);
+    }
+}
+
+@media (max-width: 1023px) {
+    .profile {
+        max-width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 767px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        max-width: calc(100% - 96px);
+    }
+}
+
+@media (max-width: 320px) {
+    .profile {
+        margin-top: 42px;
+        max-width: calc(100% - 38px);
+    }
+>>>>>>> b982c873a5a195c113fd81d9fae5eb6be938a40c
 }

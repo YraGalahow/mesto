@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .popup__title {
     display: inline-block;
     margin: 0;
@@ -27,4 +28,35 @@
         line-height: 20px;
         margin-top: 20px;
     }
+=======
+.popup__title {
+    display: inline-block;
+    margin: 0;
+    margin-top: 34px;
+    margin-bottom: 54px;
+    margin-left: 64px;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .popup__title {
+        width: 100%;
+        margin: auto;
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 500px) {
+    .popup__title {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+>>>>>>> b982c873a5a195c113fd81d9fae5eb6be938a40c
 }

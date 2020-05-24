@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .profile__avatar {
     margin: 0px;
     padding: 0;
@@ -11,4 +12,19 @@
         display: block;
         margin: 0 auto;
     }
+=======
+.profile__avatar {
+    margin: 0px;
+    padding: 0;
+    width: 120px;
+    border-radius: 120px;
+    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    .profile__avatar {
+        display: block;
+        margin: 0 auto;
+    }
+>>>>>>> b982c873a5a195c113fd81d9fae5eb6be938a40c
 }
