@@ -7,11 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px red solid;
-}
-
-@media (max-width: 1279px) {
-    .elements {}
 }
 
 @media (max-width: 1023px) {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .popup__close {
     position: absolute;
     top: -40px;
@@ -10,17 +9,4 @@
 
 .popup__close:hover {
     opacity: 0.6;
-=======
-.popup__close {
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 40.7px;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-}
-
-.popup__close:hover {
-    opacity: 0.6;
->>>>>>> b982c873a5a195c113fd81d9fae5eb6be938a40c
 }
