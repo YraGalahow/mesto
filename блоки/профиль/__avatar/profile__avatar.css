@@ -9,6 +9,5 @@
 @media (max-width: 767px) {
     .profile__avatar {
         display: block;
-        margin: 0 auto;
-    }
+            }
 }
