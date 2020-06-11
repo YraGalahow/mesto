@@ -15,7 +15,6 @@
 
 @media (max-width: 767px) {
     .profile__position {
-        margin: 0 auto;
         margin-top: 14px;
         text-align: center;
     }

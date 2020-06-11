@@ -1,0 +1,16 @@
+@import url(./__image/item-template__image.css);
+@import url(./__delete-button/item-template__delete-button.css);
+@import url(./__info/item-template__info.css);
+@import url(./__info-text/item-template__info-text.css);
+@import url(./__info-like-button/item-template__info-like-button.css);
+.item-template-card {
+    width: 282px;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+}

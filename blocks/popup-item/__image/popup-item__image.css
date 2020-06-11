@@ -1,0 +1,13 @@
+.popup-item__image {
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    width: 75vw;
+    max-height: 75vh;
+}
+
+@media (max-width: 677px) {
+    .popup-item__image {
+        width: 70vw;
+    }
+}

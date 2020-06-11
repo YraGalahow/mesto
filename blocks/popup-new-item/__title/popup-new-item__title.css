@@ -1,4 +1,4 @@
-.popup__title {
+.popup-new-item__title {
     display: inline-block;
     margin: 0;
     margin-top: 34px;
@@ -10,20 +10,20 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    text-align: center;
+    text-align: left;
+    margin-left: 36px;
 }
 
 @media (max-width: 767px) {
-    .popup__title {
-        width: 100%;
-        margin: auto;
+    .popup-new-item__title {
+        margin-left: 20px;
+        margin-bottom: 36px;
     }
 }
 
 @media (max-width: 500px) {
-    .popup__title {
+    .popup-new-item__title {
         font-size: 18px;
-        line-height: 20px;
-        margin-top: 20px;
+        line-height: 22px;
     }
 }

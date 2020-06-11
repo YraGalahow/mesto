@@ -10,27 +10,27 @@
  @media (max-width: 1279px) {
      .header {
          max-width: calc(100% - 300px);
-         margin-top: 38.6px;
+         padding-bottom: 38.6px;
      }
  }
  
  @media (max-width: 1023px) {
      .header {
          max-width: calc(100% - 200px);
-         margin-top: 36.6px;
+         padding-bottom: 36.6px;
      }
  }
  
  @media (max-width: 767px) {
      .header {
          max-width: calc(100% - 96px);
-         margin-top: 34.6px;
+         padding-bottom: 34.6px;
      }
  }
  
  @media (max-width: 320px) {
      .header {
          max-width: 100%;
-         margin-top: 0px;
+         padding-bottom: 31.6px;
      }
  }

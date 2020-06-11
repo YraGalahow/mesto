@@ -1,0 +1,19 @@
+.popup-item__close {
+    position: absolute;
+    top: -37px;
+    right: -40px;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+@media (max-width: 320px) {
+    .popup-item__close {
+        width: 30px;
+        top: -37px;
+        right: -25px;
+    }
+}
+
+.popup-new-item__close:hover {
+    opacity: 0.6;
+}

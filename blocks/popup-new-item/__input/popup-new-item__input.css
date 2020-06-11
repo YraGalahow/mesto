@@ -1,6 +1,6 @@
-@import url(./_first-name/popup__input_first-name.css);
-@import url(./_position/popup__input_position.css);
-.popup__input {
+@import url(./_title/popup-new-item__input_title.css);
+@import url(./_url/popup-new-item__input_url.css);
+.popup-new-item__input {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -13,17 +13,18 @@
     width: 358px;
     margin-left: 36px;
     margin-bottom: 30px;
-}
-
-.popup__input:nth-of-type(2n) {
-    margin-bottom: 0px;
+    text-align: left;
 }
 
 @media (max-width: 767px) {
-    .popup__input {
-        margin: auto;
-        margin-top: 54px;
-        margin-left: 10px;
-        width: 90%;
+    .popup-new-item__input {
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        width: calc(100% - 40px);
     }
+}
+
+.popup-new-item__input:nth-of-type(2n) {
+    margin-bottom: 0px;
 }

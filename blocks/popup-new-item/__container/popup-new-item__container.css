@@ -1,4 +1,4 @@
-.popup__container {
+.popup-new-item__container {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -11,8 +11,8 @@
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .popup__container {
-        max-width: 70%;
+@media (max-width: 550px) {
+    .popup-new-item__container {
+        width: calc(100% - 80px);
     }
 }

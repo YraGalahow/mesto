@@ -1,4 +1,4 @@
-@import url(../element/element.css);
+@import url(../item-template-card/item-template-card.css);
 .elements {
     margin: 0 auto;
     padding: 0;
@@ -7,11 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px red solid;
-}
-
-@media (max-width: 1279px) {
-    .elements {}
 }
 
 @media (max-width: 1023px) {
@@ -29,7 +24,7 @@
 
 @media (max-width: 320px) {
     .elements {
-        max-width: calc(100% - 38px);
+        max-width: 100%;
         margin-top: 36px;
     }
 }

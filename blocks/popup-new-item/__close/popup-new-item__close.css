@@ -1,12 +1,12 @@
-.popup__close {
+.popup-new-item__close {
     position: absolute;
-    top: -40px;
-    right: -40px;
+    top: -32px;
+    right: -32px;
     width: 40.7px;
     background: rgba(0, 0, 0, 0);
     border: none;
 }
 
-.popup__close:hover {
+.popup-new-item__close:hover {
     opacity: 0.6;
 }

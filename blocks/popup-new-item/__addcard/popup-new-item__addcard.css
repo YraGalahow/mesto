@@ -1,4 +1,4 @@
-.popup__button {
+.popup-new-item__addcard {
     display: block;
     margin: 0 auto;
     margin-top: 48px;
@@ -18,11 +18,11 @@
 }
 
 @media (max-width: 768px) {
-    .popup__button {
+    .popup-new-item__addcard {
         width: 90%;
     }
 }
 
-.popup__button:hover {
+.popup-new-item__addcard:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
