@@ -29,10 +29,8 @@ const popup = document.querySelector('.popup');
 const popupNewItem = document.querySelector('.popup-new-item');
 const popupItem = document.querySelector('.popup-item');
 
-const popupSubmitButton = document.querySelector('popup__button');
 const profileEditButton = document.querySelector('.profile__edit-button');
 const profileAddButton = document.querySelector('.profile__add-button');
-const popupNewItemAddCard = document.querySelector('.popup-new-item__addcard');
 const popupCloseButton = document.querySelector('.popup__close');
 const popupNewItemCloseButton = document.querySelector('.popup-new-item__close');
 const popupItemClose = document.querySelector('.popup-item__close');
@@ -49,45 +47,24 @@ const namePlaceValue = document.querySelector('.popup-new-item__input_title');
 const urlPhotoValue = document.querySelector('.popup-new-item__input_url');
 const popupItemImage = document.querySelector('.popup-item__image');
 const popupItemTitle = document.querySelector('.popup-item__title');
-const itemTemplate = document.querySelector('#item-template').content;
 
-function openPopup() {
-    popup.classList.add('popup_opened');
+function openClose(popup, popupNewItem, popupItem) {
     popupFirstName.value = profileFirstName.innerText;
     popupPosition.value = profilePosition.innerText;
+    popup.classList.toggle('popup_opened');
+
+    popupNewItem.classList.toggle('popup_opened');
+
+    popupItem.classList.toggle('popup_opened');
 
 }
 
-function openPopupNewItem() {
-    popupNewItem.classList.add('popup_opened');
-    urlPhotoValue.value = "";
-    namePlaceValue.value = "";
-}
-
-
-function openPhoto() {
-    popupItem.classList.add('popup_opened');
-}
-
-function closePhoto() {
-    popupItem.classList.remove('popup_opened');
-}
-
-function closePopupNewItem() {
-    popupNewItem.classList.remove('popup_opened');
-}
-
-function closePopup() {
-    popup.classList.remove('popup_opened');
-}
-
-function formSubmitHandle(evt) {
+function saveProfile(evt) {
     evt.preventDefault();
 
     profileFirstName.textContent = popupFirstName.value;
     profilePosition.textContent = popupPosition.value;
-
-    closePopup()
+    popup.classList.toggle('popup_opened');
 }
 
 function renderItem(item) {
@@ -108,7 +85,8 @@ function renderItem(item) {
     });
 
     newElement.querySelector('.item-template__image').addEventListener('click', function() {
-        openPhoto();
+
+        popupItem.classList.toggle('popup_opened');
         popupItemImage.src = item.link;
         popupItemTitle.textContent = item.name;
 
@@ -125,28 +103,28 @@ function render() {
 
 render();
 
-function formSubmitHandler(evt) {
+function createСard(evt) {
     evt.preventDefault();
-    let copyItem = {
+    const copyItem = {
         name: "",
         link: "",
     };
     copyItem.link = urlPhotoValue.value;
     copyItem.name = namePlaceValue.value;
     renderItem(copyItem);
-    closePopupNewItem();
+    popupNewItem.classList.toggle('popup_opened');
 }
 
-profileEditButton.addEventListener('click', openPopup);
+profileEditButton.addEventListener('click', () => { openClose(popup); })
 
-profileAddButton.addEventListener('click', openPopupNewItem);
+profileAddButton.addEventListener('click', () => { openClose(popupNewItem); })
 
-popupItemClose.addEventListener('click', closePhoto);
+popupItemClose.addEventListener('click', () => { openClose(popupItem); })
 
-popupCloseButton.addEventListener('click', closePopup);
+popupCloseButton.addEventListener('click', () => { openClose(popup); })
 
-popupNewItemCloseButton.addEventListener('click', closePopupNewItem);
+popupNewItemCloseButton.addEventListener('click', () => { openClose(popupNewItem); })
 
-formElement.addEventListener('submit', formSubmitHandle);
+formElement.addEventListener('submit', saveProfile);
 
-formNewItemElement.addEventListener('submit', formSubmitHandler);
+formNewItemElement.addEventListener('submit', createСard);
