@@ -48,16 +48,30 @@ const urlPhotoValue = document.querySelector('.popup-new-item__input_url');
 const popupItemImage = document.querySelector('.popup-item__image');
 const popupItemTitle = document.querySelector('.popup-item__title');
 
-function openClose(popup, popupNewItem, popupItem) {
-    popupFirstName.value = profileFirstName.innerText;
-    popupPosition.value = profilePosition.innerText;
-    popup.classList.toggle('popup_opened');
+function openClose() {
 
-    popupNewItem.classList.toggle('popup_opened');
+    profileEditButton.addEventListener('click', function(openPopup) {
+        popupFirstName.value = profileFirstName.innerText;
+        popupPosition.value = profilePosition.innerText;
+        popup.classList.toggle('popup_opened');
+    });
+    popupCloseButton.addEventListener('click', function(closePopup) {
+        popup.classList.toggle('popup_opened');
+    });
 
-    popupItem.classList.toggle('popup_opened');
-
+    profileAddButton.addEventListener('click', function(openPopupNewItem) {
+        urlPhotoValue.value = "";
+        namePlaceValue.value = "";
+        popupNewItem.classList.toggle('popup_opened');
+    });
+    popupNewItemCloseButton.addEventListener('click', function(closePopupNewItem) {
+        popupNewItem.classList.toggle('popup_opened');
+    });
+    popupItemClose.addEventListener('click', function(closePopupItem) {
+        popupItem.classList.toggle('popup_opened');
+    });
 }
+openClose();
 
 function saveProfile(evt) {
     evt.preventDefault();
@@ -114,16 +128,6 @@ function createСard(evt) {
     renderItem(copyItem);
     popupNewItem.classList.toggle('popup_opened');
 }
-
-profileEditButton.addEventListener('click', () => { openClose(popup); })
-
-profileAddButton.addEventListener('click', () => { openClose(popupNewItem); })
-
-popupItemClose.addEventListener('click', () => { openClose(popupItem); })
-
-popupCloseButton.addEventListener('click', () => { openClose(popup); })
-
-popupNewItemCloseButton.addEventListener('click', () => { openClose(popupNewItem); })
 
 formElement.addEventListener('submit', saveProfile);
 
