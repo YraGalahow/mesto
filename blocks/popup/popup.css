@@ -3,6 +3,7 @@
 @import url(./__title/popup__title.css);
 @import url(./__input/popup__input.css);
 @import url(./__button/popup__button.css);
+@import url(./__button/_disabled/popup__button_disabled.css);
 .popup {
     margin: 0 auto;
     padding: 0;

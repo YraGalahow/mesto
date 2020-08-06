@@ -25,7 +25,11 @@ const initialCards = [{
 ];
 
 
+
+
+
 const popup = document.querySelector('.popup');
+
 const popupNewItem = document.querySelector('.popup-new-item');
 const popupItem = document.querySelector('.popup-item');
 
@@ -34,13 +38,15 @@ const profileAddButton = document.querySelector('.profile__add-button');
 const popupCloseButton = document.querySelector('.popup__close');
 const popupNewItemCloseButton = document.querySelector('.popup-new-item__close');
 const popupItemClose = document.querySelector('.popup-item__close');
+const popupButton = document.querySelector('.popup__button');
+const popupNewItemAddCard = document.querySelector('.popup-new-item__addcard');
 
 
 const profileFirstName = document.querySelector('.profile__first-name');
 const profilePosition = document.querySelector('.profile__position');
 const popupFirstName = document.querySelector('.popup__input_first-name');
 const popupPosition = document.querySelector('.popup__input_position');
-const formElement = document.querySelector('.popup__container');
+
 const formNewItemElement = document.querySelector('.popup-new-item__container');
 const elementsSection = document.querySelector('.elements');
 const namePlaceValue = document.querySelector('.popup-new-item__input_title');
@@ -48,15 +54,23 @@ const urlPhotoValue = document.querySelector('.popup-new-item__input_url');
 const popupItemImage = document.querySelector('.popup-item__image');
 const popupItemTitle = document.querySelector('.popup-item__title');
 
+
+
+const formElemen = document.querySelector('.popup__container');
+
+
 function openClose() {
 
     profileEditButton.addEventListener('click', function(openPopup) {
         popupFirstName.value = profileFirstName.innerText;
         popupPosition.value = profilePosition.innerText;
         popup.classList.toggle('popup_opened');
+
+
     });
     popupCloseButton.addEventListener('click', function(closePopup) {
         popup.classList.toggle('popup_opened');
+
     });
 
     profileAddButton.addEventListener('click', function(openPopupNewItem) {
@@ -70,15 +84,61 @@ function openClose() {
     popupItemClose.addEventListener('click', function(closePopupItem) {
         popupItem.classList.toggle('popup_opened');
     });
+    document.addEventListener('keydown', function(closePopupEsc) {
+        if (event.key === "Escape") {
+            popup.classList.remove('popup_opened');
+        }
+    });
+    document.addEventListener('keydown', function(closePopupNewItemEsc) {
+        if (event.key === "Escape") {
+            popupNewItem.classList.remove('popup_opened');
+        }
+    });
+    document.addEventListener('keydown', function(closePopupItemEsc) {
+        if (event.key === "Escape") {
+            popupItem.classList.remove('popup_opened');
+        }
+    });
+    document.addEventListener('click', function(event) {
+        if (popup.classList.contains('popup_opened') && event.target == popupButton) {
+            saveProfile;
+        }
+        if (popup.classList.contains('popup_opened')) {
+            if (event.target == popup) {
+                popup.classList.remove('popup_opened');
+            }
+        }
+    });
+    document.addEventListener('click', function(event) {
+        if (popupNewItem.classList.contains('popup_opened')) {
+            if (event.target == popupNewItemAddCard) {
+                createСard;
+            }
+        }
+        if (popupNewItem.classList.contains('popup_opened') && event.target == popupNewItem) {
+            popupNewItem.classList.remove('popup_opened');
+        }
+    });
+    document.addEventListener('click', function(event) {
+        if (popupItem.classList.contains('popup_opened') && event.target == popupItem) {
+            popupItem.classList.remove('popup_opened');
+        }
+    });
+
+
 }
 openClose();
+
+
 
 function saveProfile(evt) {
     evt.preventDefault();
 
     profileFirstName.textContent = popupFirstName.value;
     profilePosition.textContent = popupPosition.value;
-    popup.classList.toggle('popup_opened');
+    popup.classList.remove('popup_opened');
+
+
 }
 
 function renderItem(item) {
@@ -129,6 +189,6 @@ function createСard(evt) {
     popupNewItem.classList.toggle('popup_opened');
 }
 
-formElement.addEventListener('submit', saveProfile);
+formElemen.addEventListener('submit', saveProfile);
 
 formNewItemElement.addEventListener('submit', createСard);

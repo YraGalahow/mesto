@@ -31,22 +31,30 @@
         <p class="footer__copyright">&copy; 2020 Mesto Russia </p>
     </footer>
     <section class="popup">
-        <form name="popup-form" method="get" autocomplete="off" class="popup__container">
+        <form name="form" id="form" method="get" autocomplete="off" class="popup__container" novalidate>
             <button type="reset" class="popup__close"><img src="./images/CloseIcon.svg" alt=" кнопка"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
-            <input type="text" name="first-name" class="popup__input popup__input_first-name">
-            <input type="text" name="position" class="popup__input popup__input_position">
-            <button type="submit" class="popup__button">Сохранить</button>
+
+            <input type="text" name="first-name" class="popup__input popup__input_first-name" id="popup-input" required minlength="2" maxlength="40" autocomplete="off">
+            <span class='popup__input-error' id='first-name-error'></span>
+
+
+            <input type="text" name="position" class="popup__input popup__input_position" id="popup-input" required minlength="2" maxlength="200" autocomplete="off">
+            <span class='popup__input-error' id='position-error'></span>
+
+            <button type="submit" class=" popup__button" id="popup-button" disabled>Сохранить</button>
         </form>
     </section>
 
     <section class="popup-new-item">
-        <form class="popup-new-item__container" method="post" action="#" name="popup-container">
+        <form class="popup-new-item__container" method="post" action="#" name="form" id="form" novalidate>
             <button type="reset" class="popup-new-item__close"><img src="./images/CloseIcon.svg" alt="кнопка"></button>
             <h3 class="popup-new-item__title">Новое место</h3>
-            <input class="popup-new-item__input popup-new-item__input_title" type="text" name="title" placeholder="Название">
-            <input class="popup-new-item__input popup-new-item__input_url" type="url" name="url" placeholder="Ссылка на картинку">
-            <button type="submit" class="popup-new-item__addcard">Создать</button>
+            <input class="popup-new-item__input popup-new-item__input_title" id="popup-input" type="text" name="title" required minlength="1" maxlength="30" placeholder="Название" autocomplete="off">
+            <span class='popup__input-error' id='title-error'></span>
+            <input class="popup-new-item__input popup-new-item__input_url" id="popup-input" type="url" required name="url" placeholder="Ссылка на картинку" autocomplete="off">
+            <span class='popup__input-error' id='url-error'></span>
+            <button type="submit" class="popup-new-item__addcard" id="popup-button" disabled>Создать</button>
         </form>
     </section>
     <section class="popup-item">
@@ -67,4 +75,5 @@
              </div>
     </template>
     <script src="./script/script.js"></script>
+    <script src="./script/validate.js"></script>
 </body>

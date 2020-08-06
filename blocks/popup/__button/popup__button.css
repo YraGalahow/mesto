@@ -5,7 +5,6 @@
     margin-bottom: 36.51px;
     width: 358px;
     height: 50.15px;
-    background-color: #000000;
     border-radius: 2px;
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-style: normal;
@@ -13,8 +12,9 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #FFFFFF;
     border: none;
+    background: #000000;
+    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -25,4 +25,5 @@
 
 .popup__button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(250, 249, 249);
 }
