@@ -153,7 +153,7 @@ function renderItem(item) {
         popupItemImage.src = item.link;
         popupItemTitle.textContent = item.name;
     });
-    elementsSection.prepend(newElement);
+    addСard(newElement);
 }
 
 function render() {
@@ -171,20 +171,14 @@ function createСard(evt) {
     };
     copyItem.link = urlPhotoValue.value;
     copyItem.name = namePlaceValue.value;
-    const itemTemplate = document.querySelector('#item-template').content;
-    const newElement = itemTemplate.cloneNode(true);
-    const itemTemplateImage = newElement.querySelector('.item-template__image');
-    itemTemplateImage.src = copyItem.link;
-    newElement.querySelector('.item-template__info-text').textContent = copyItem.name;
-    newElement.querySelector(".item-template__info-like-button").addEventListener('click', function(evt) {
-        evt.target.classList.toggle("item-template__info-like-button_active");
-    });
-    newElement.querySelector(".item-template__delete-button").addEventListener('click', function(itm) {
-        itm.target.closest('.item-template-card').remove();
-    });
-    elementsSection.prepend(newElement);
+    renderItem(copyItem);
     const popupClose = popupNewItem;
     closePhoto(popupClose)
+
+}
+
+function addСard(newElement) {
+    elementsSection.prepend(newElement);
 }
 
 formElemen.addEventListener('submit', saveProfile);
