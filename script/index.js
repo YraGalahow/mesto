@@ -153,7 +153,12 @@ function renderItem(item) {
         popupItemImage.src = item.link;
         popupItemTitle.textContent = item.name;
     });
-    addСard(newElement);
+    addCard(newElement);
+    return newElement;
+}
+
+function addCard(newElement) {
+    elementsSection.prepend(newElement);
 }
 
 function render() {
@@ -177,9 +182,6 @@ function createСard(evt) {
 
 }
 
-function addСard(newElement) {
-    elementsSection.prepend(newElement);
-}
 
 formElemen.addEventListener('submit', saveProfile);
 formNewItemElement.addEventListener('submit', createСard);
