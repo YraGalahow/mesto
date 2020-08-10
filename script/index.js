@@ -48,10 +48,12 @@ const formElemen = document.querySelector('.popup__container');
 
 function openPhoto(popupOpen) {
     popupOpen.classList.add('popup_opened');
+    document.addEventListener('keydown', popupEsc);
 }
 
 function closePhoto(popupClose) {
     popupClose.classList.remove('popup_opened');
+    document.removeEventListener('keydown', popupEsc);
 }
 
 profileEditButton.addEventListener('click', function(openPopup) {
@@ -67,6 +69,7 @@ popupCloseButton.addEventListener('click', function(closePopup) {
 });
 
 profileAddButton.addEventListener('click', function(openPopupNewItem) {
+
     urlPhotoValue.value = "";
     namePlaceValue.value = "";
     const popupOpen = popupNewItem;
@@ -84,15 +87,16 @@ popupItemClose.addEventListener('click', function(closePopupItem) {
     closePhoto(popupClose)
 });
 
-document.addEventListener('keydown', function(closePopupEsc) {
-    const popupiEsc = Array.from(document.querySelectorAll('.popup_opened'));
-    const popupClose = popupiEsc[0];
-    if (popupClose != undefined && closePopupEsc.keyCode == "27") {
-        closePhoto(popupClose)
-    } else {
-        return;
-    }
-});
+
+const popupEsc = (evt) => {
+    const popupOpened = document.querySelector('.popup_opened');
+    if (evt.key === 'Escape') {
+        if (popupOpened != undefined) {
+            closePhoto(popupOpened);
+        }
+    };
+}
+
 
 document.addEventListener('click', function(event) {
     if (popup.classList.contains('popup_opened') && event.target == popupButton) {
@@ -134,12 +138,12 @@ function saveProfile(evt) {
     closePhoto(popupClose)
 }
 
-function renderItem(item) {
+function renderItem(copyItem) {
     const itemTemplate = document.querySelector('#item-template').content;
     const newElement = itemTemplate.cloneNode(true);
     const itemTemplateImage = newElement.querySelector('.item-template__image');
-    itemTemplateImage.src = item.link;
-    newElement.querySelector('.item-template__info-text').textContent = item.name;
+    itemTemplateImage.src = copyItem.link;
+    newElement.querySelector('.item-template__info-text').textContent = copyItem.name;
     newElement.querySelector(".item-template__info-like-button").addEventListener('click', function(evt) {
         evt.target.classList.toggle("item-template__info-like-button_active");
     });
@@ -150,10 +154,10 @@ function renderItem(item) {
     itemTemplateImage.addEventListener('click', function() {
         const popupOpen = popupItem;
         openPhoto(popupOpen)
-        popupItemImage.src = item.link;
-        popupItemTitle.textContent = item.name;
+        popupItemImage.src = copyItem.link;
+        popupItemTitle.textContent = copyItem.name;
     });
-    addCard(newElement);
+
     return newElement;
 }
 
@@ -162,7 +166,10 @@ function addCard(newElement) {
 }
 
 function render() {
-    initialCards.forEach(renderItem);
+    initialCards.forEach(copyItem => {
+        const newElement = renderItem(copyItem);
+        addCard(newElement, elementsSection);
+    });
 }
 
 render();
@@ -171,12 +178,11 @@ function createСard(evt) {
 
     evt.preventDefault();
     const copyItem = {
-        name: "",
-        link: "",
+        link: urlPhotoValue.value,
+        name: namePlaceValue.value
+
     };
-    copyItem.link = urlPhotoValue.value;
-    copyItem.name = namePlaceValue.value;
-    renderItem(copyItem);
+    addCard(renderItem(copyItem));
     const popupClose = popupNewItem;
     closePhoto(popupClose)
 
