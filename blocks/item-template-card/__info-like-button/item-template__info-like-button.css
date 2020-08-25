@@ -11,4 +11,5 @@
 
 .item-template__info-like-button:hover {
     opacity: 0.6;
+    cursor: pointer;
 }

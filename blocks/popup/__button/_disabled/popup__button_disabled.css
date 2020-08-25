@@ -4,3 +4,11 @@
     box-sizing: border-box;
     background: #FFFFFF;
 }
+
+.popup__button_disabled:hover {
+    color: #C4C4C4;
+    border: 2px solid #C4C4C4;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    cursor: default;
+}

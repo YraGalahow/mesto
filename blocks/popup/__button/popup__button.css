@@ -26,4 +26,5 @@
 .popup__button:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(250, 249, 249);
+    cursor: pointer;
 }
